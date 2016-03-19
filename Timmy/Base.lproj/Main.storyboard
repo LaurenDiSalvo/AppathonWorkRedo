@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="I2R-eO-aB5">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--About-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Timmy" customModuleProvider="target" sceneMemberID="viewController">
+                    <imageView key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12363196_1239801829378650_7664561658284132969_o.jpg" id="Rb4-Ei-vvF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <tabBarItem key="tabBarItem" title="About" image="About" selectedImage="questionicon.jpg" id="acW-dT-cKf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-545.06666666666661" y="-867.14666666666665"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="HB5-OY-Crv">
+            <objects>
+                <viewController id="I2R-eO-aB5" customClass="MainViewController" customModule="Timmy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b8y-0k-6tZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1A-6L-aMh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Hv-LG-YLy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ln-PX-i3J">
+                                <rect key="frame" x="126" y="453" width="69" height="40"/>
+                                <accessibility key="accessibilityConfiguration" label="Enter App"/>
+                                <state key="normal" title="Select">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="modal" id="mqE-4l-hZ6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="timmy-global-health-circle1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="scP-rK-KYR">
+                                <rect key="frame" x="40" y="76" width="240" height="227"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sXF-XS-PF4">
+                                <rect key="frame" x="0.0" y="288" width="320" height="162"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4Hv-LG-YLy" id="vbL-q9-DCi"/>
+                                    <outlet property="delegate" destination="4Hv-LG-YLy" id="fzy-ps-HrT"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="chapterPickerView" destination="sXF-XS-PF4" id="3U7-lG-R28"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zw-Xf-8Wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1626" y="-226"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cGC-ZB-V9s"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="GVN-aG-jSL"/>
+                        <segue destination="Lik-aO-HJw" kind="relationship" relationship="viewControllers" id="SIB-bL-Eib"/>
+                        <segue destination="mVF-Ck-RBN" kind="relationship" relationship="viewControllers" id="td8-lH-7aU"/>
+                        <segue destination="Y1t-5A-CYT" kind="relationship" relationship="viewControllers" id="nWf-Mo-hVz"/>
+                        <segue destination="a5G-cc-oxU" kind="relationship" relationship="viewControllers" id="b3p-mk-7SG"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1090" y="-226"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="J2J-UX-Nh9">
+            <objects>
+                <viewController storyboardIdentifier="calendar" id="Lik-aO-HJw" customClass="CalendarViewController" customModule="Timmy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZFC-pd-Kcg"/>
+                        <viewControllerLayoutGuide type="bottom" id="e6M-hA-95b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xAg-JR-XKb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mb1-6j-dp8" customClass="NWCalendarView" customModule="Timmy" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="Calendar" id="jax-x6-Rv6"/>
+                    <connections>
+                        <outlet property="calendarView" destination="Mb1-6j-dp8" id="wo4-kT-9Qb"/>
+                        <segue destination="Jgx-LG-Ui6" kind="modal" id="2Ll-KL-R9M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cNI-vH-Ww0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-549" y="-243"/>
+        </scene>
+        <!--Event View Controller-->
+        <scene sceneID="IHA-n2-YJH">
+            <objects>
+                <viewController storyboardIdentifier="events" id="Jgx-LG-Ui6" customClass="EventViewController" customModule="Timmy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ya8-bg-TWX"/>
+                        <viewControllerLayoutGuide type="bottom" id="bLN-qa-U0M"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pbk-ix-EMb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK5-RH-pUi">
+                                <rect key="frame" x="9" y="-9" width="280" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wX-JN-nyG">
+                                <rect key="frame" x="9" y="112" width="291" height="117"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X30-1m-drK">
+                                <rect key="frame" x="9" y="380" width="280" height="112"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARH-uC-JP6">
+                                <rect key="frame" x="9" y="245" width="271" height="99"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="date" destination="FK5-RH-pUi" id="9Ad-tD-wUS"/>
+                        <outlet property="eventDescription" destination="X30-1m-drK" id="INo-KN-4Tu"/>
+                        <outlet property="eventLocation" destination="ARH-uC-JP6" id="GUm-6n-qQp"/>
+                        <outlet property="eventName" destination="6wX-JN-nyG" id="vRM-p2-hyR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akI-AG-8Rk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-65" y="-264"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="F8Z-S3-lO9">
+            <objects>
+                <viewController id="a5G-cc-oxU" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="C6F-sz-QY2"/>
+                        <viewControllerLayoutGuide type="bottom" id="yE6-xy-Ng1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O4W-vG-pY6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Login" image="Login" id="Zjd-Ib-6ml"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8T-l9-sqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1403" y="409"/>
+        </scene>
+        <!--Messaging-->
+        <scene sceneID="mDD-dO-lCb">
+            <objects>
+                <viewController id="Y1t-5A-CYT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xRa-RN-r6c"/>
+                        <viewControllerLayoutGuide type="bottom" id="cm9-KR-1g8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xbt-x6-bXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Messaging" image="Messaging" id="eBq-4H-yuf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kal-yD-gEO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-987" y="462"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="JmV-V4-Vha">
+            <objects>
+                <viewController id="mVF-Ck-RBN" customClass="HomeViewController" customModule="Timmy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YIo-zA-RcF"/>
+                        <viewControllerLayoutGuide type="bottom" id="GuL-bQ-loe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="95Q-Dm-IYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m4x-EH-hKZ">
+                                <rect key="frame" x="44" y="83" width="234" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0e-gB-JTs">
+                                <rect key="frame" x="122" y="111" width="61" height="30"/>
+                                <state key="normal" title="Donate"/>
+                                <connections>
+                                    <action selector="DonateButton:" destination="mVF-Ck-RBN" eventType="touchUpInside" id="Di3-FZ-BmQ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Hf-GH-lL6">
+                                <rect key="frame" x="15" y="149" width="291" height="349"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AnnouncementTableViewCell" rowHeight="90" id="Myt-Dt-KWP" customClass="AnnouncementTableViewCell" customModule="Timmy" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="291" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Myt-Dt-KWP" id="4kz-2U-69k">
+                                            <rect key="frame" x="0.0" y="0.0" width="291" height="89.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Announcement Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ne2-9B-7y7">
+                                                    <rect key="frame" x="8" y="3" width="178" height="33"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Announcement Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMh-Ze-T8a">
+                                                    <rect key="frame" x="8" y="44" width="275" height="31"/>
+                                                    <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="hNy-TC-R2l"/>
+                    <connections>
+                        <outlet property="FundraisingProgressView" destination="m4x-EH-hKZ" id="bmd-hx-1Z1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jA4-ib-zRe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-590" y="423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="12363196_1239801829378650_7664561658284132969_o.jpg" width="750" height="1750"/>
+        <image name="About" width="17" height="30"/>
+        <image name="Calendar" width="27" height="30"/>
+        <image name="Home" width="30" height="30"/>
+        <image name="Login" width="30" height="27"/>
+        <image name="Messaging" width="30" height="30"/>
+        <image name="questionicon.jpg" width="2544" height="2484"/>
+        <image name="timmy-global-health-circle1.jpg" width="2544" height="2484"/>
+    </resources>
+</document>
